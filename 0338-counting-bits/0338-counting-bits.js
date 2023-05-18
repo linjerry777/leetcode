@@ -16,7 +16,13 @@ var countBits = function(n) {
     //     }
     // }
     // return result
+    //設n+1長的陣列因為第0個必然是0
     const result = new Array(n + 1).fill(0);
+    //從1開始到n
+    //result[i] = result [011
+    //                 & 010] +1
+    //                  -----
+    //                   010
     for (let i = 1; i <= n; i++) {
         result[i] = result[i & (i - 1)] + 1;
     }
