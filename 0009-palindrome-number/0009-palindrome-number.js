@@ -14,9 +14,12 @@
         //     return true
         //   }
         // }
+      //0-9 true <0 = false
       if (x == 0 && x<10) return true;
       if(x<0)return false
+      //轉數組
       x = x.toString()
+      //雙指針頭!=尾return false
       let l =0;
       let r = x.length-1
       while(l<=r){
