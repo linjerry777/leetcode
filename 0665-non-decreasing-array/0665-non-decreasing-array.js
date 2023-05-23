@@ -5,9 +5,12 @@
 
 
 var checkPossibility = function(nums) {
-    
+    //需要的次數
     let c = 0;
-    for (let i = 1; i < nums.length && c <= 1; i++) {
+    
+
+    for (let i = 1; i < nums.length; i++) {
+        
         if (nums[i - 1] > nums[i]) {
             c++;
             if (i==1 || nums[i - 2] <= nums[i]) {
